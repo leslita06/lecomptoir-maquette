@@ -29,3 +29,9 @@ Photos d'illustration Pexels (licence Pexels, usage libre), à remplacer par les
 - Réservation commune (assets/v2/resa.js) : 7 étapes, récapitulatif continu, confirmation avec référence, agenda, itinéraire, envoi sur WhatsApp. Démonstration : rien n'est transmis au restaurant.
 - Photos du lieu : site de l'Ivoire Trade Center (page Le Comptoir). Ambiances de soirée : Pexels (licence Pexels), sans personne reconnaissable présentée comme personnel ou artiste.
 - Ambiances proposées : salle, près des fenêtres, bar, terrasse. La terrasse est attestée par la publication Instagram du Comptoir « La terrasse est plus grande, vous pouvez enfin vous isoler » (relevée le 03/11/2026) ; sa photo est une illustration Pexels (Boris Ivas), à remplacer par une photo du lieu. Rien n'est dit de sa taille ni de sa capacité.
+
+## Version C « Atelier » (03/11/2026)
+- /version-c/ et /version-c/reserver.html ; la page /choix/ présente maintenant trois cartes.
+- Direction artistique propre : terracotta #C4502F, sable #EFE3CF, noir #17120E ; Archivo large (titres) et Instrument Serif italique (accents), Google Fonts, licence OFL. Le logo du Comptoir est repris tel quel, recoloré en noir.
+- Réservation redessinée (assets/c/resa-c.js) : 7 étapes (moment, jour, heure, couverts, place dont la terrasse, occasion, nom), billet qui se remplit à chaque étape, confirmation avec référence, agenda (Google et fichier .ics), itinéraire et WhatsApp. Démonstration : rien n'est transmis au restaurant.
+- Contenus repris des sources ci-dessus, rien d'ajouté : ni plat, ni prix, ni invité. Les photos de terrasse sont des illustrations Pexels.
