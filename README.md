@@ -20,3 +20,12 @@ Photos d'illustration Pexels (licence Pexels, usage libre), à remplacer par les
 - La carte et les prix réels (menu digital existant).
 - Le formulaire de réservation (WhatsApp Business, e-mail ou outil de réservation).
 - Les photos du lieu et le nom de domaine.
+
+
+## Versions A et B (03/11/2026)
+- Page de choix : /choix/ (la racine reste la v1, intacte).
+- Version A « Signature » : /version-a/ et /version-a/reserver.html.
+- Version B « La Nuit du Comptoir » : /version-b/ et /version-b/reserver.html (table, entrée ou liste d'attente pour une soirée).
+- Réservation commune (assets/v2/resa.js) : 7 étapes, récapitulatif continu, confirmation avec référence, agenda, itinéraire, envoi sur WhatsApp. Démonstration : rien n'est transmis au restaurant.
+- Photos du lieu : site de l'Ivoire Trade Center (page Le Comptoir). Ambiances de soirée : Pexels (licence Pexels), sans personne reconnaissable présentée comme personnel ou artiste.
+- Ambiances proposées : salle, près des fenêtres, bar. Aucune terrasse proposée : rien ne montre que le lieu en a une.
