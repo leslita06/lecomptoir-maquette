@@ -40,6 +40,7 @@
         salle: ['En salle', 'Sous les suspensions en osier'],
         fenetre: ['Côté fenêtres', 'À la lumière, entre les palmes'],
         bar: ['Près du bar', 'Pour l\u2019ambiance et les cocktails'],
+        terrasse: ['En terrasse', 'Dehors, pour s\u2019isoler un peu'],
         egal: ['Sans préférence', 'La meilleure table disponible']
       },
       occ: { aucune: 'Aucune en particulier', anniv: 'Anniversaire', affaires: 'Repas d\u2019affaires', rdv: 'Rendez-vous à deux', amis: 'Entre amis', fete: 'Célébration' },
@@ -95,7 +96,8 @@
       },
       zones: {
         salle: ['Main room', 'Under the wicker pendant lights'], fenetre: ['By the windows', 'In the light, among the palms'],
-        bar: ['Near the bar', 'For the buzz and the cocktails'], egal: ['No preference', 'The best table available']
+        bar: ['Near the bar', 'For the buzz and the cocktails'],
+        terrasse: ['On the terrace', 'Outdoors, a little away from it all'], egal: ['No preference', 'The best table available']
       },
       occ: { aucune: 'Nothing in particular', anniv: 'Birthday', affaires: 'Business meal', rdv: 'Date for two', amis: 'With friends', fete: 'Celebration' },
       allergies: 'Allergies or diet', alg: { gluten: 'Gluten', arachide: 'Peanuts', mer: 'Seafood', lactose: 'Lactose', vege: 'Vegetarian', autre: 'Other' },

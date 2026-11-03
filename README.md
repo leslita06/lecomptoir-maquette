@@ -28,4 +28,4 @@ Photos d'illustration Pexels (licence Pexels, usage libre), à remplacer par les
 - Version B « La Nuit du Comptoir » : /version-b/ et /version-b/reserver.html (table, entrée ou liste d'attente pour une soirée).
 - Réservation commune (assets/v2/resa.js) : 7 étapes, récapitulatif continu, confirmation avec référence, agenda, itinéraire, envoi sur WhatsApp. Démonstration : rien n'est transmis au restaurant.
 - Photos du lieu : site de l'Ivoire Trade Center (page Le Comptoir). Ambiances de soirée : Pexels (licence Pexels), sans personne reconnaissable présentée comme personnel ou artiste.
-- Ambiances proposées : salle, près des fenêtres, bar. Aucune terrasse proposée : rien ne montre que le lieu en a une.
+- Ambiances proposées : salle, près des fenêtres, bar, terrasse. La terrasse est attestée par la publication Instagram du Comptoir « La terrasse est plus grande, vous pouvez enfin vous isoler » (relevée le 03/11/2026) ; sa photo est une illustration Pexels (Boris Ivas), à remplacer par une photo du lieu. Rien n'est dit de sa taille ni de sa capacité.

@@ -23,7 +23,7 @@ s_ey:"Next night",s_m:"November · Saturday · from 10 pm",s_p:"A velvet night: 
 s_h:"Doors",s_hv:"from 10 pm",s_e:"Entry",s_ev:"by reservation",s_l:"Venue",s_cta:"Book my table for the night",
 s_p1:"Old School Experience · Oxmo Puccino",s_p2:"After-show · Tayc, the night that carried on from the concert",
 r_ey:"Reservations",r_t:"Your table,<br><em>in seven moves.</em>",
-r1:"The moment",r2:"The day, on the calendar",r3:"The time, in one tap",r4:"How many guests",r5:"The setting: room, windows, bar",r6:"The occasion and your notes",r7:"Your details, and it's sent",r_cta:"Start my booking",
+r1:"The moment",r2:"The day, on the calendar",r3:"The time, in one tap",r4:"How many guests",r5:"The setting: room, windows, bar, terrace",r6:"The occasion and your notes",r7:"Your details, and it's sent",r_cta:"Start my booking",
 a_ey:"Getting here & contact",a_t:"At the heart of the Ivoire Trade Center.",a1:"Address",a_it:"Directions →",a2:"Opening hours",a2v:"Monday to Friday, from 7:30 am<br>Saturday and Sunday, from 8:30 am",a3:"Phone",a_pin:"Ground floor of the Ivoire Trade Center",
 ig_t:"Life at Le Comptoir, in pictures.",ig_b:"Follow on Instagram",
 f_big:"Your table<br><em>is waiting.</em>",fh1:"Mon–Fri from 7:30 am",fh2:"Sat–Sun from 8:30 am",f_s:"The site",f_cr:"Photos: Le Comptoir and Pexels (free licence).",

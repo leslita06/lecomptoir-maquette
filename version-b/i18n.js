@@ -26,7 +26,7 @@ m_note:"Today's dishes and prices are on Le Comptoir's digital menu.",m_btn:"Ope
 jo_ey:"And by day too",jo_t:"From the first coffee <em>to the last drink</em>",
 jo1s:"from 7:30 am",jo1:"Morning",jo2s:"Sat & Sun",jo2:"Brunch",jo3s:"midday",jo3:"Lunch",jo4s:"evening",jo4:"Dinner",
 a_ey:"Getting here",a_t:"Meet us <em>at the ITC</em>",a1:"Address",a1b:"ground floor",a2:"Opening hours",a2v:"Mon–Fri from 7:30 am<br>Sat–Sun from 8:30 am",
-a3:"Nights",a3v:"See the line-up,<br>by reservation",a4:"Phone",a_pin:"Ivoire Trade Center, Cocody",
+a3:"Nights",a3v:"See the line-up,<br>by reservation",a4:"Phone",a5:"Where to sit",a5v:"In the main room, by the windows, at the bar or on the terrace: you choose when booking.",a_pin:"Ivoire Trade Center, Cocody",
 f_big:"See you <em>tonight.</em>",fh1:"Mon–Fri from 7:30 am",fh2:"Sat–Sun from 8:30 am",f_s:"The site",f_cr:"Photos: Le Comptoir and Pexels (free licence).",
 wa:"A question? WhatsApp",
 rp_ey:"Reservations",rp_back:"← Back to the site",rp_h:"Your night<br><em>starts here.</em>",
