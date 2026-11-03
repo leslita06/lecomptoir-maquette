@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le Comptoir · deux propositions de site</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:300 1rem/1.65 'Poppins',system-ui,sans-serif;background:#F7EBD3;color:#1C1F1A;-webkit-font-smoothing:antialiased}
+.demo{background:#0B120E;color:rgba(247,235,211,.7);font-size:.68rem;letter-spacing:.08em;text-align:center;padding:6px 10px}
+header{background:#1E3328;color:#F7EBD3;padding:70px 0 150px;text-align:center}
+.w{width:min(1240px,92vw);margin:auto}
+header img{height:84px;width:auto;margin:0 auto 26px}
+header p.ey{font:600 .72rem 'Poppins';letter-spacing:.32em;text-transform:uppercase;color:#C8A15A}
+header h1{font:400 clamp(2.4rem,5vw,4.2rem)/1.05 'DM Serif Display',serif;margin:14px 0 14px}
+header h1 em{color:#C8A15A}
+header span{opacity:.78;max-width:640px;display:block;margin:auto}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:-100px}
+.v{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 40px 80px rgba(30,51,40,.18);display:flex;flex-direction:column}
+.v.b{background:#111915;color:#F7EBD3}
+.shot{position:relative;padding:22px 22px 0;background:linear-gradient(180deg,#EFE2C6,#fff)}
+.v.b .shot{background:linear-gradient(180deg,#050806,#111915)}
+.br{border-radius:12px 12px 0 0;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.18);border:1px solid rgba(0,0,0,.08)}
+.br i{display:flex;gap:6px;padding:9px 12px;background:#E8E3D8}.v.b .br i{background:#1d2621}
+.br i b{width:9px;height:9px;border-radius:50%;background:#cfc6b5}.v.b .br i b{background:#3a453f}
+.br img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top}
+.ph{position:absolute;right:30px;bottom:-34px;width:24%;border-radius:18px;overflow:hidden;border:5px solid #1C1F1A;box-shadow:0 18px 40px rgba(0,0,0,.35);background:#1C1F1A}
+.ph img{display:block;width:100%}
+.tx{padding:56px 34px 34px;display:flex;flex-direction:column;flex:1}
+.tag{font:600 .68rem 'Poppins';letter-spacing:.28em;text-transform:uppercase;color:#C8A15A}
+.v h2{font:400 2.5rem/1.05 'DM Serif Display',serif;margin:8px 0 12px}
+.v.b h2{font:800 2.3rem/1 'Poppins';letter-spacing:-.03em;text-transform:uppercase}
+.v.b h2 em{font:italic 400 1.05em 'DM Serif Display',serif;text-transform:none;color:#C8A15A}
+.v p{opacity:.8;margin-bottom:18px}
+.v ul{list-style:none;margin-bottom:26px;display:grid;gap:8px}
+.v li{display:flex;gap:10px;font-size:.92rem}
+.v li::before{content:"✦";color:#C8A15A;flex:none}
+.resa{display:grid;grid-template-columns:1.6fr 1fr;gap:10px;margin-bottom:26px}
+.resa img{width:100%;border-radius:10px;border:1px solid rgba(0,0,0,.08);aspect-ratio:16/10;object-fit:cover;object-position:top}
+.resa img+img{aspect-ratio:auto;height:100%;object-fit:cover}
+.resa small{grid-column:1/-1;font-size:.74rem;opacity:.6}
+.act{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap}
+.btn{flex:1;min-width:200px;display:inline-flex;justify-content:center;align-items:center;gap:.6em;padding:1.05em 1.6em;border-radius:999px;font:600 .9rem 'Poppins';text-decoration:none;transition:.3s;letter-spacing:.02em}
+.btn-v{background:#2F4F3E;color:#F7EBD3}.btn-v:hover{background:#1E3328;transform:translateY(-2px)}
+.btn-o{background:#C8A15A;color:#0A0F0C}.btn-o:hover{background:#d8b36e;transform:translateY(-2px)}
+.btn-l{border:1px solid rgba(47,79,62,.35);color:#2F4F3E}.v.b .btn-l{border-color:rgba(247,235,211,.3);color:#F7EBD3}
+.btn-l:hover{border-color:#C8A15A}
+.cmp{margin:80px auto 30px}
+.cmp h3{font:400 2rem 'DM Serif Display',serif;text-align:center;margin-bottom:24px}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;font-size:.92rem}
+th,td{padding:16px 20px;text-align:left;border-bottom:1px solid #EFE2C6;vertical-align:top}
+th{font:600 .72rem 'Poppins';letter-spacing:.18em;text-transform:uppercase;color:#6B675C;background:#FBF6EC}
+td:first-child{font-weight:500;color:#2F4F3E;width:22%}
+footer{text-align:center;padding:30px 0 60px;font-size:.84rem;color:#6B675C}
+footer a{color:#2F4F3E}
+@media (max-width:900px){header{padding:50px 0 120px}.g{grid-template-columns:1fr;margin-top:-80px}.tx{padding:50px 22px 26px}.v h2{font-size:2.1rem}.ph{width:28%;right:20px}table{font-size:.84rem}th,td{padding:12px}td:first-child{width:30%}}
+</style>
+</head>
+<body>
+<div class="demo">Maquette de démonstration · deux propositions</div>
+<header>
+  <div class="w">
+    <img src="../assets/img/logo_creme_c.png" alt="Le Comptoir">
+    <p class="ey">Le Comptoir · Ivoire Trade Center, Cocody</p>
+    <h1>Deux sites, <em>deux caractères.</em></h1>
+    <span>Les deux versions partagent la même réservation en ligne, en sept étapes, confirmée sur WhatsApp. Elles diffèrent par le ton : l'une raconte la journée, l'autre vend la nuit.</span>
+  </div>
+</header>
+<main class="w">
+  <div class="g">
+    <article class="v a">
+      <div class="shot"><div class="br"><i><b></b><b></b><b></b></i><img src="img/a-ordi.jpg" alt="Accueil de la version Signature sur ordinateur"></div><div class="ph"><img src="img/a-tel.jpg" alt="Version Signature sur téléphone"></div></div>
+      <div class="tx">
+        <p class="tag">Version A</p>
+        <h2>Signature</h2>
+        <p>Éditoriale et cinématographique : le site se lit comme un magazine, et suit une journée au Comptoir, du premier café à la nuit.</p>
+        <ul>
+          <li>Grand diaporama d'accueil, typographie serif affirmée</li>
+          <li>Défilement narratif : l'horloge avance et la page passe du jour à la nuit</li>
+          <li>Carte en index animé, soirée mise en scène, plan de l'ITC</li>
+        </ul>
+        <div class="resa"><img src="img/a-resa-ordi.jpg" alt="Réservation Signature sur ordinateur"><img src="img/a-resa-tel.jpg" alt="Réservation Signature sur téléphone"><small>La page de réservation, sur ordinateur et sur téléphone</small></div>
+        <div class="act"><a class="btn btn-v" href="../version-a/">Voir la version Signature →</a><a class="btn btn-l" href="../version-a/reserver.html">Tester la réservation</a></div>
+      </div>
+    </article>
+    <article class="v b">
+      <div class="shot"><div class="br"><i><b></b><b></b><b></b></i><img src="img/b-ordi.jpg" alt="Accueil de la version Nuit sur ordinateur"></div><div class="ph"><img src="img/b-tel.jpg" alt="Version Nuit sur téléphone"></div></div>
+      <div class="tx">
+        <p class="tag">Version B</p>
+        <h2>La Nuit <em>du Comptoir</em></h2>
+        <p>Sombre et festive : tout est pensé pour remplir les soirées, avec un agenda, un compte à rebours et trois façons de réserver.</p>
+        <ul>
+          <li>Agenda des soirées et archives des dates passées</li>
+          <li>Table, entrée ou liste d'attente, en un geste</li>
+          <li>Galerie façon Instagram, carte du bar par onglets, plan de l'ITC</li>
+        </ul>
+        <div class="resa"><img src="img/b-resa-ordi.jpg" alt="Réservation Nuit sur ordinateur"><img src="img/b-resa-tel.jpg" alt="Réservation Nuit sur téléphone"><small>La page de réservation, sur ordinateur et sur téléphone</small></div>
+        <div class="act"><a class="btn btn-o" href="../version-b/">Voir la version Nuit →</a><a class="btn btn-l" href="../version-b/reserver.html?moment=soiree">Tester la réservation</a></div>
+      </div>
+    </article>
+  </div>
+  <section class="cmp">
+    <h3>En un coup d'œil</h3>
+    <table>
+      <tr><th></th><th>A · Signature</th><th>B · La Nuit</th></tr>
+      <tr><td>Pour qui</td><td>Clientèle d'affaires, déjeuners, brunchs, dîners</td><td>Public des soirées, groupes, anniversaires</td></tr>
+      <tr><td>Ambiance</td><td>Crème et vert, lumière du jour, élégance calme</td><td>Noir, or et terracotta, énergie de concert</td></tr>
+      <tr><td>Point fort</td><td>Raconte le lieu du matin au soir</td><td>Remplit les soirées : agenda, entrée, liste d'attente</td></tr>
+      <tr><td>Réservation</td><td colspan="2">Commune aux deux : moment, calendrier, créneaux, couverts, ambiance, occasion et allergies, coordonnées ; récapitulatif toujours visible ; confirmation avec référence, agenda, itinéraire et envoi sur WhatsApp. Français et anglais.</td></tr>
+    </table>
+  </section>
+</main>
+<footer>Photos : Le Comptoir et Pexels (licence libre). · <a href="https://www.instagram.com/lecomptoircocody/" target="_blank" rel="noopener">@lecomptoircocody</a></footer>
+</body>
+</html>
