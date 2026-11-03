@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Le Comptoir · deux propositions de site</title>
+<title>Le Comptoir · trois propositions de site</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="../assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600;800&family=Archivo:wdth,wght@100,800;100,900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font:300 1rem/1.65 'Poppins',system-ui,sans-serif;background:#F7EBD3;color:#1C1F1A;-webkit-font-smoothing:antialiased}
@@ -19,7 +19,16 @@ header p.ey{font:600 .72rem 'Poppins';letter-spacing:.32em;text-transform:upperc
 header h1{font:400 clamp(2.4rem,5vw,4.2rem)/1.05 'DM Serif Display',serif;margin:14px 0 14px}
 header h1 em{color:#C8A15A}
 header span{opacity:.78;max-width:640px;display:block;margin:auto}
-.g{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:-100px}
+.g{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:-100px}
+.v.c{background:#F8F2E8;color:#17120E;border-radius:4px;box-shadow:12px 12px 0 #17120E,0 40px 80px rgba(23,18,14,.18)}
+.v.c .shot{background:linear-gradient(180deg,#C4502F,#EFE3CF)}
+.v.c .br{border-radius:0}.v.c .br i{background:#17120E}.v.c .br i b{background:#C4502F}
+.v.c .tag{color:#C4502F}
+.v.c h2{font:900 2.3rem/.95 'Archivo',sans-serif;font-stretch:125%;text-transform:uppercase;letter-spacing:-.01em}
+.v.c h2 em{font:italic 400 1.05em 'Instrument Serif',serif;text-transform:none;color:#C4502F;letter-spacing:0}
+.v.c li::before{content:"✺";color:#C4502F}
+.v.c .btn-t{background:#C4502F;color:#F8F2E8;border-radius:0}.btn-t:hover{background:#17120E;transform:translateY(-2px)}
+.v.c .btn-l{border-radius:0;border-color:#17120E;color:#17120E}
 .v{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 40px 80px rgba(30,51,40,.18);display:flex;flex-direction:column}
 .v.b{background:#111915;color:#F7EBD3}
 .shot{position:relative;padding:22px 22px 0;background:linear-gradient(180deg,#EFE2C6,#fff)}
@@ -57,17 +66,20 @@ th{font:600 .72rem 'Poppins';letter-spacing:.18em;text-transform:uppercase;color
 td:first-child{font-weight:500;color:#2F4F3E;width:22%}
 footer{text-align:center;padding:30px 0 60px;font-size:.84rem;color:#6B675C}
 footer a{color:#2F4F3E}
-@media (max-width:900px){header{padding:50px 0 120px}.g{grid-template-columns:1fr;margin-top:-80px}.tx{padding:50px 22px 26px}.v h2{font-size:2.1rem}.ph{width:28%;right:20px}table{font-size:.84rem}th,td{padding:12px}td:first-child{width:30%}}
+@media (max-width:1180px){.g{grid-template-columns:1fr 1fr}.v.c{grid-column:1/-1}}
+@media (max-width:900px){header{padding:50px 0 120px}.g{grid-template-columns:1fr;margin-top:-80px}.tx{padding:50px 22px 26px}.v h2{font-size:2.1rem}.ph{width:28%;right:20px}table{font-size:.84rem}th,td{padding:12px}td:first-child{width:30%}
+  .cmp{overflow-x:auto;-webkit-overflow-scrolling:touch}.cmp table{min-width:640px}.cmp h3{position:sticky;left:0}}
+@media (max-width:600px){.cmp table,.cmp tbody,.cmp tr,.cmp td{display:block;min-width:0;width:auto!important}.cmp tr:first-child{display:none}.cmp td{border:0;padding:6px 14px}.cmp tr{border-bottom:1px solid #EFE2C6;padding:10px 0}.cmp td:first-child{padding-top:10px}.cmp td:nth-child(2)::before{content:'A · '}.cmp td:nth-child(3)::before{content:'B · '}.cmp td:nth-child(4)::before{content:'C · '}.cmp td[colspan]::before{content:''}.cmp td::before{font-weight:600;color:#C8A15A}}
 </style>
 </head>
 <body>
-<div class="demo">Maquette de démonstration · deux propositions</div>
+<div class="demo">Maquette de démonstration · trois propositions</div>
 <header>
   <div class="w">
     <img src="../assets/img/logo_creme_c.png" alt="Le Comptoir">
     <p class="ey">Le Comptoir · Ivoire Trade Center, Cocody</p>
-    <h1>Deux sites, <em>deux caractères.</em></h1>
-    <span>Les deux versions partagent la même réservation en ligne, en sept étapes, confirmée sur WhatsApp. Elles diffèrent par le ton : l'une raconte la journée, l'autre vend la nuit.</span>
+    <h1>Trois sites, <em>trois caractères.</em></h1>
+    <span>Les trois versions proposent une réservation en ligne en sept étapes, terrasse comprise, confirmée sur WhatsApp. Elles diffèrent par le ton : la première raconte la journée, la deuxième vend la nuit, la troisième fait vivre le lieu en grand, de la terrasse à l'afterwork.</span>
   </div>
 </header>
 <main class="w">
@@ -102,15 +114,30 @@ footer a{color:#2F4F3E}
         <div class="act"><a class="btn btn-o" href="../version-b/">Voir la version Nuit →</a><a class="btn btn-l" href="../version-b/reserver.html?moment=soiree">Tester la réservation</a></div>
       </div>
     </article>
+    <article class="v c">
+      <div class="shot"><div class="br"><i><b></b><b></b><b></b></i><img src="img/c-ordi.jpg" alt="Accueil de la version Atelier sur ordinateur"></div><div class="ph"><img src="img/c-tel.jpg" alt="Version Atelier sur téléphone"></div></div>
+      <div class="tx">
+        <p class="tag">Version C</p>
+        <h2>Atelier <em>du Comptoir</em></h2>
+        <p>Une autre direction artistique : très photographique, terracotta et sable, une typographie large et franche, un ton plus jeune pour l'afterwork, le brunch et la terrasse.</p>
+        <ul>
+          <li>Grandes photos pleine page, blocs asymétriques, animations au défilement</li>
+          <li>La journée en cinq moments, de 7 h 30 à la nuit, et une section terrasse</li>
+          <li>Réservation redessinée : le billet se remplit à chaque étape</li>
+        </ul>
+        <div class="resa"><img src="img/c-resa-ordi.jpg" alt="Réservation Atelier sur ordinateur"><img src="img/c-resa-tel.jpg" alt="Réservation Atelier sur téléphone"><small>Le choix de la place, terrasse comprise, sur ordinateur et sur téléphone</small></div>
+        <div class="act"><a class="btn btn-t" href="../version-c/">Voir la version Atelier →</a><a class="btn btn-l" href="../version-c/reserver.html">Tester la réservation</a></div>
+      </div>
+    </article>
   </div>
   <section class="cmp">
     <h3>En un coup d'œil</h3>
     <table>
-      <tr><th></th><th>A · Signature</th><th>B · La Nuit</th></tr>
-      <tr><td>Pour qui</td><td>Clientèle d'affaires, déjeuners, brunchs, dîners</td><td>Public des soirées, groupes, anniversaires</td></tr>
-      <tr><td>Ambiance</td><td>Crème et vert, lumière du jour, élégance calme</td><td>Noir, or et terracotta, énergie de concert</td></tr>
-      <tr><td>Point fort</td><td>Raconte le lieu du matin au soir</td><td>Remplit les soirées : agenda, entrée, liste d'attente</td></tr>
-      <tr><td>Réservation</td><td colspan="2">Commune aux deux : moment, calendrier, créneaux, couverts, ambiance, occasion et allergies, coordonnées ; récapitulatif toujours visible ; confirmation avec référence, agenda, itinéraire et envoi sur WhatsApp. Français et anglais.</td></tr>
+      <tr><th></th><th>A · Signature</th><th>B · La Nuit</th><th>C · Atelier</th></tr>
+      <tr><td>Pour qui</td><td>Clientèle d'affaires, déjeuners, brunchs, dîners</td><td>Public des soirées, groupes, anniversaires</td><td>Clientèle plus jeune : afterwork, brunch, terrasse</td></tr>
+      <tr><td>Ambiance</td><td>Crème et vert, lumière du jour, élégance calme</td><td>Noir, or et terracotta, énergie de concert</td><td>Terracotta, sable et noir, photos en grand, typographie large</td></tr>
+      <tr><td>Point fort</td><td>Raconte le lieu du matin au soir</td><td>Remplit les soirées : agenda, entrée, liste d'attente</td><td>Donne envie de venir à toute heure, terrasse en avant</td></tr>
+      <tr><td>Réservation</td><td colspan="3">Dans les trois : moment, calendrier, créneaux, couverts, place (dont la terrasse), occasion et allergies, coordonnées ; récapitulatif toujours visible ; confirmation avec référence, agenda, itinéraire et envoi sur WhatsApp. Français et anglais.</td></tr>
     </table>
   </section>
 </main>

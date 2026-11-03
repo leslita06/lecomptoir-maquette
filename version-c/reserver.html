@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Réserver une table · Le Comptoir · Atelier</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#C4502F">
+<link rel="icon" href="../assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/c/site-c.css">
+<link rel="stylesheet" href="../assets/c/resa-c.css">
+</head>
+<body>
+<div class="demo" data-i18n="demo">Maquette de démonstration · version Atelier</div>
+<nav class="nav solid" data-nav>
+  <div class="w">
+    <a href="./" class="brand" aria-label="Le Comptoir"><img src="../assets/c/logo_noir_c.png" alt="Le Comptoir"><b>LE COMPTOIR<i>atelier</i></b></a>
+    <div class="nr">
+      <a class="go" href="./" data-i18n="rp_back" style="border:0">← Retour au site</a>
+      <div class="lang" role="group" aria-label="Langue"><button data-l="fr" class="on">FR</button><button data-l="en">EN</button></div>
+    </div>
+  </div>
+</nav>
+<header class="rp-top">
+  <div class="w">
+    <span class="ey" data-i18n="rp_ey">Réservation</span>
+    <h1 class="X"><span data-i18n="rp_h1">Votre table,</span><br><span class="I" data-i18n="rp_h2">pour vous.</span></h1>
+    <p data-i18n="rp_s">Café, brunch, afterwork, dîner ou soirée, en salle ou en terrasse : sept étapes et c'est envoyé.</p>
+  </div>
+</header>
+<main class="w rp-main">
+  <div id="resa"></div>
+  <p class="rp-help"><span data-i18n="rp_q">Une question, un groupe, une privatisation ?</span><a href="https://wa.me/2250798974607" target="_blank" rel="noopener" data-i18n="rp_help">Écrivez-nous sur WhatsApp</a></p>
+</main>
+<script src="../assets/v2/site.js"></script>
+<script src="i18n.js"></script>
+<script src="../assets/c/resa-c.js"></script>
+<script>
+var R=AtelierResa({root:'#resa',lang:LC.lang,offset:110,
+  events:[{date:'2026-11-28',name:'Velvet Night',from:'22:00'}],
+  images:{logo:'../assets/c/logo_noir_c.png',idle:'../assets/img/terrasse.jpg',
+    moments:{matin:'../assets/img/matin.jpg',brunch:'../assets/img/brunch2.jpg',dejeuner:'../assets/v2/lieu-assiette.jpg',afterwork:'../assets/v2/nuit-toast.jpg',diner:'../assets/v2/lieu-table.jpg',soiree:'../assets/v2/nuit-scene.jpg'},
+    zones:{terrasse:'../assets/img/terrasse.jpg',salle:'../assets/v2/lieu-salle.jpg',fenetre:'../assets/v2/lieu-table.jpg',bar:'../assets/img/bar.jpg',egal:''}}});
+LC.hooks.push(function(l){R.setLang(l)});
+</script>
+</body>
+</html>
