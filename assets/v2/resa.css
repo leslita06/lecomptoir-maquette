@@ -169,7 +169,7 @@
 body.rs-lock{overflow:hidden}
 /* tablette & téléphone */
 @media (max-width:980px){
-  .rs-wrap{grid-template-columns:1fr;border-radius:20px}
+  .rs-wrap{grid-template-columns:minmax(0,1fr);border-radius:20px}.rs-main{min-width:0}
   .rs-side{display:none}
   .rs-main{padding:26px 20px 24px;min-height:0}
   .rs-nav .rs-next{display:none}
