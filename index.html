@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Le Comptoir · Bar & restaurant · Ivoire Trade Center, Cocody</title>
+<meta name="description" content="Le Comptoir, bar et restaurant bistronomique à l'Ivoire Trade Center, Cocody, Abidjan. Café, brunch, déjeuner, dîner et soirées. Réservez votre table en ligne ou sur WhatsApp.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Le Comptoir · Ivoire Trade Center, Cocody">
+<meta property="og:description" content="Café, brunch, déjeuner, dîner et soirées. Réservez votre table en ligne.">
+<meta property="og:image" content="assets/img/hero.jpg">
+<meta name="theme-color" content="#2F4F3E">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --vert:#2F4F3E; --vert-f:#1F3529; --nuit:#14211A; --creme:#F7EBD3; --creme-2:#EFE0C1;
+  --or:#C8A15A; --terra:#CF553D; --encre:#1E1E1A; --gris:#6B675C;
+  --serif:'DM Serif Display',Georgia,serif; --sans:'Poppins',system-ui,sans-serif;
+  --ban:30px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:var(--sans);font-weight:300;color:var(--encre);background:var(--creme);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08}
+.wrap{width:min(1200px,90vw);margin:auto}
+.wrap>*{min-width:0}
+html,body{overflow-x:clip}
+.eyebrow{font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;font-weight:500;color:var(--or)}
+.btn{display:inline-flex;align-items:center;gap:.6em;padding:.95em 1.7em;border-radius:999px;font:500 .9rem var(--sans);letter-spacing:.04em;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:.25s}
+.btn-or{background:var(--or);color:var(--nuit)}
+.btn-or:hover{background:#d6b06a;transform:translateY(-2px)}
+.btn-line{border-color:rgba(247,235,211,.6);color:var(--creme);background:transparent}
+.btn-line:hover{background:rgba(247,235,211,.1)}
+.btn-vert{background:var(--vert);color:var(--creme)}
+.btn-vert:hover{background:var(--vert-f)}
+
+/* bandeau maquette */
+.demo{position:fixed;top:0;left:0;right:0;height:var(--ban);z-index:60;background:var(--nuit);color:rgba(247,235,211,.75);font-size:.72rem;letter-spacing:.06em;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 12px;border-bottom:1px solid rgba(200,161,90,.25)}
+
+/* navigation */
+.nav{position:fixed;top:var(--ban);left:0;right:0;z-index:50;transition:.35s;padding:18px 0}
+.nav.solid{background:rgba(20,33,26,.94);backdrop-filter:blur(10px);padding:10px 0;box-shadow:0 8px 30px rgba(0,0,0,.18)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--creme)}
+.brand img{height:44px;width:auto}
+.brand span{font:600 .8rem var(--sans);letter-spacing:.24em}
+.menu{display:flex;gap:28px;list-style:none}
+.menu a{color:var(--creme);text-decoration:none;font-size:.86rem;letter-spacing:.03em;opacity:.85;position:relative}
+.menu a:hover{opacity:1}
+.menu a::after{content:"";position:absolute;left:0;right:100%;bottom:-6px;height:1px;background:var(--or);transition:.3s}
+.menu a:hover::after{right:0}
+.nav-r{display:flex;align-items:center;gap:14px}
+.lang{display:flex;border:1px solid rgba(247,235,211,.35);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--creme);font:500 .72rem var(--sans);padding:6px 10px;cursor:pointer;opacity:.6;letter-spacing:.08em}
+.lang button.on{background:var(--or);color:var(--nuit);opacity:1}
+.nav .btn{padding:.7em 1.3em;font-size:.82rem}
+.burger{display:none;background:none;border:0;width:40px;height:40px;cursor:pointer;position:relative}
+.burger i{position:absolute;left:9px;right:9px;height:1.5px;background:var(--creme);transition:.3s}
+.burger i:nth-child(1){top:14px}.burger i:nth-child(2){top:20px}.burger i:nth-child(3){top:26px}
+.open .burger i:nth-child(1){top:20px;transform:rotate(45deg)}
+.open .burger i:nth-child(2){opacity:0}
+.open .burger i:nth-child(3){top:20px;transform:rotate(-45deg)}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:var(--creme);overflow:hidden;background:var(--nuit)}
+.hero-bg{position:absolute;inset:0;background:url(assets/img/hero.jpg) center 40%/cover;transform:scale(1.08);animation:zoom 18s ease-out forwards}
+@keyframes zoom{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,33,26,.9) 0%,rgba(20,33,26,.62) 45%,rgba(20,33,26,.15) 100%),linear-gradient(180deg,rgba(20,33,26,.6) 0%,rgba(20,33,26,0) 30%,rgba(20,33,26,.85) 100%)}
+.hero .wrap{position:relative;z-index:2;padding:150px 0 11vh;display:grid;grid-template-columns:1.4fr 1fr;align-items:end;gap:40px}
+.hero h1{font-size:clamp(3rem,6.6vw,6.2rem);letter-spacing:-.01em}
+.hero h1 em{color:var(--or)}
+.hero p.lead{font-size:clamp(1rem,1.4vw,1.2rem);max-width:520px;margin:22px 0 34px;opacity:.9}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-card{justify-self:end;background:rgba(20,33,26,.55);backdrop-filter:blur(8px);border:1px solid rgba(200,161,90,.35);border-radius:18px;padding:26px 28px;max-width:340px}
+.hero-card h3{font-size:1.35rem;margin-bottom:12px;color:var(--or)}
+.hero-card ul{list-style:none;font-size:.9rem}
+.hero-card li{display:flex;justify-content:space-between;gap:20px;padding:7px 0;border-bottom:1px solid rgba(247,235,211,.12)}
+.hero-card li:last-child{border:0}
+.hero-card .now{margin-top:14px;font-size:.8rem;display:flex;align-items:center;gap:8px;opacity:.85}
+.dot{width:8px;height:8px;border-radius:50%;background:#7bc47f;box-shadow:0 0 0 4px rgba(123,196,127,.2)}
+.scroll{position:absolute;left:50%;bottom:22px;z-index:2;transform:translateX(-50%);width:22px;height:36px;border:1.5px solid rgba(247,235,211,.5);border-radius:12px}
+.scroll::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;background:var(--or);border-radius:2px;animation:sc 1.8s infinite}
+@keyframes sc{0%{opacity:0;transform:translateY(0)}40%{opacity:1}100%{opacity:0;transform:translateY(12px)}}
+
+/* sections */
+section{padding:120px 0}
+.head{max-width:680px;margin-bottom:60px}
+.head h2{font-size:clamp(2.3rem,4.6vw,3.8rem);margin:14px 0 18px}
+.head p{color:var(--gris);font-size:1.02rem}
+.dark{background:var(--vert);color:var(--creme)}
+.dark .head p,.night .head p{color:rgba(247,235,211,.78)}
+.night{background:var(--nuit);color:var(--creme)}
+
+/* intro */
+.intro .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.intro .pics{position:relative;height:620px}
+.intro .pics img{position:absolute;object-fit:cover;border-radius:14px;box-shadow:0 30px 60px rgba(31,53,41,.25)}
+.intro .pics img:first-child{width:72%;height:78%;top:0;left:0}
+.intro .pics img:last-child{width:52%;height:52%;right:0;bottom:0;border:8px solid var(--creme)}
+.intro blockquote{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--vert);border-left:2px solid var(--or);padding-left:22px;margin:30px 0}
+.intro .sign{display:flex;gap:40px;margin-top:34px;flex-wrap:wrap}
+.intro .sign div{font-size:.86rem;color:var(--gris)}
+.intro .sign b{display:block;font:400 1.6rem var(--serif);color:var(--vert)}
+
+/* moments */
+.moments-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.moment{position:relative;border-radius:16px;overflow:hidden;min-height:520px;display:flex;align-items:flex-end;color:var(--creme);text-decoration:none;isolation:isolate}
+.moment img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1.2s}
+.moment::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 30%,rgba(20,33,26,.95))}
+.moment:hover img{transform:scale(1.07)}
+.moment .in{padding:28px 24px}
+.moment .h{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or);font-weight:500}
+.moment h3{font-size:2rem;margin:8px 0 10px}
+.moment p{font-size:.9rem;opacity:.85;max-height:0;overflow:hidden;transition:max-height .5s}
+.moment:hover p,.moment:focus p{max-height:200px}
+.moment .go{display:inline-block;margin-top:14px;font-size:.8rem;border-bottom:1px solid var(--or);padding-bottom:2px}
+
+/* carte */
+.carte .wrap{display:grid;grid-template-columns:320px 1fr;gap:70px}
+.tabs{display:flex;flex-direction:column;gap:6px;position:sticky;top:120px;align-self:start}
+.tabs button{text-align:left;background:none;border:0;border-left:2px solid rgba(47,79,62,.15);padding:14px 20px;font:400 1.5rem var(--serif);color:var(--gris);cursor:pointer;transition:.25s}
+.tabs button small{display:block;font:400 .78rem var(--sans);letter-spacing:.06em;opacity:.8}
+.tabs button.on{color:var(--vert);border-color:var(--or);background:rgba(200,161,90,.1)}
+.panel{display:none;animation:fade .5s}
+.panel.on{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.panel img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px}
+.panel h3{font-size:2.4rem;color:var(--vert);margin-bottom:8px}
+.panel .tag{font-size:.82rem;color:var(--terra);font-weight:500;letter-spacing:.06em;margin-bottom:22px}
+.cats{list-style:none}
+.cats li{padding:16px 0;border-bottom:1px dashed rgba(47,79,62,.25)}
+.cats b{font:400 1.2rem var(--serif);color:var(--encre)}
+.cats span{display:block;font-size:.88rem;color:var(--gris)}
+.note{margin-top:26px;font-size:.84rem;color:var(--gris);background:var(--creme-2);padding:16px 18px;border-radius:10px}
+
+/* soirées */
+.soirees{position:relative;overflow:hidden}
+.soirees::before{content:"";position:absolute;inset:0;background:url(assets/img/bar.jpg) center/cover;opacity:.13}
+.soirees .wrap{position:relative}
+.feat{display:grid;grid-template-columns:1fr 1.1fr;border-radius:20px;overflow:hidden;background:rgba(247,235,211,.04);border:1px solid rgba(200,161,90,.35);margin-bottom:50px}
+.feat .ph{min-height:480px;background:url(assets/img/soiree.jpg) center/cover;position:relative}
+.feat .badge{position:absolute;top:22px;left:22px;background:var(--terra);color:#fff;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;padding:7px 14px;border-radius:999px;font-weight:500}
+.feat .tx{padding:50px}
+.date-big{display:flex;align-items:baseline;gap:14px;color:var(--or)}
+.date-big b{font:400 5rem/1 var(--serif)}
+.date-big span{font-size:.9rem;letter-spacing:.2em;text-transform:uppercase}
+.feat h3{font-size:3rem;margin:14px 0 16px}
+.feat p{opacity:.85;margin-bottom:16px}
+.feat .meta{display:flex;gap:26px;flex-wrap:wrap;margin:22px 0 30px;font-size:.88rem}
+.feat .meta div{border-left:1px solid var(--or);padding-left:12px}
+.feat .meta small{display:block;opacity:.6;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+.agenda{list-style:none}
+.agenda h4{font:500 .76rem var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--or);margin:0 0 10px}
+.ev{display:grid;grid-template-columns:120px 1fr auto;gap:30px;align-items:center;padding:26px 0;border-top:1px solid rgba(247,235,211,.15)}
+.ev .d{font:400 1.9rem var(--serif);color:var(--or);line-height:1}
+.ev .d small{display:block;font:400 .74rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:rgba(247,235,211,.6);margin-top:6px}
+.ev h5{font:400 1.5rem var(--serif)}
+.ev p{font-size:.88rem;opacity:.7}
+.ev .st{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:999px;border:1px solid rgba(247,235,211,.3);opacity:.7;white-space:nowrap}
+
+/* réservation */
+.resa .wrap{display:grid;grid-template-columns:1fr 1.25fr;gap:70px;align-items:start}
+.resa .side img{border-radius:16px;aspect-ratio:4/5;object-fit:cover;width:100%;margin-top:30px}
+.why{list-style:none;margin-top:26px}
+.why li{display:flex;gap:14px;padding:10px 0;font-size:.95rem}
+.why li::before{content:"";flex:none;width:22px;height:22px;border-radius:50%;background:var(--or) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%2314211A' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat;margin-top:2px}
+form.card,.ok{background:#fffaf0;border-radius:22px;padding:42px;box-shadow:0 30px 80px rgba(31,53,41,.14);border:1px solid rgba(200,161,90,.3)}
+.steps{display:flex;gap:8px;margin-bottom:28px}
+.steps i{flex:1;height:3px;border-radius:2px;background:rgba(47,79,62,.12)}
+.steps i.on{background:var(--or)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.f{display:flex;flex-direction:column;gap:7px;margin-bottom:18px}
+.f label,.f legend{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;color:var(--vert)}
+.f input,.f select,.f textarea{font:400 1rem var(--sans);padding:14px 16px;border:1px solid rgba(47,79,62,.22);border-radius:10px;background:#fff;color:var(--encre);width:100%;transition:.2s;min-height:52px}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--or);box-shadow:0 0 0 4px rgba(200,161,90,.18)}
+.f .err{font-size:.78rem;color:var(--terra);display:none}
+.f.bad input,.f.bad select{border-color:var(--terra)}
+.f.bad .err{display:block}
+fieldset.f{border:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{text-transform:none;letter-spacing:0;font:400 .9rem var(--sans);color:var(--encre)}
+.chips input{position:absolute;opacity:0;width:0;height:0;min-height:0}
+.chips span{display:inline-block;padding:10px 16px;border-radius:999px;border:1px solid rgba(47,79,62,.22);cursor:pointer;transition:.2s;background:#fff}
+.chips input:checked+span{background:var(--vert);color:var(--creme);border-color:var(--vert)}
+.chips input:focus-visible+span{box-shadow:0 0 0 3px rgba(200,161,90,.5)}
+.stepper{display:flex;align-items:center;border:1px solid rgba(47,79,62,.22);border-radius:10px;background:#fff;overflow:hidden;min-height:52px}
+.stepper button{width:52px;align-self:stretch;border:0;background:var(--creme-2);font-size:1.3rem;cursor:pointer;color:var(--vert)}
+.stepper input{border:0;text-align:center;font-weight:500;min-height:50px}
+.stepper input:focus{box-shadow:none}
+.tel{display:flex;gap:8px}
+.tel span{display:flex;align-items:center;padding:0 14px;border:1px solid rgba(47,79,62,.22);border-radius:10px;background:var(--creme-2);font-size:.95rem;white-space:nowrap}
+.legal{font-size:.78rem;color:var(--gris);margin:6px 0 22px}
+form.card .btn{width:100%;justify-content:center;font-size:1rem;padding:1.1em}
+.ok{display:none;text-align:center}
+.ok.on{display:block;animation:fade .6s}
+.ok .ic{width:76px;height:76px;border-radius:50%;background:var(--vert);margin:0 auto 22px;display:grid;place-items:center}
+.ok h3{font-size:2.3rem;color:var(--vert);margin-bottom:10px}
+.ok .ref{display:inline-block;font:500 .82rem var(--sans);letter-spacing:.2em;background:var(--creme-2);padding:8px 14px;border-radius:8px;margin:6px 0 22px}
+.recap{list-style:none;text-align:left;border-top:1px solid rgba(47,79,62,.15);margin-bottom:24px}
+.recap li{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid rgba(47,79,62,.15);font-size:.95rem}
+.recap li b{font-weight:500;text-align:right}
+.ok .act{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.ok .small{font-size:.82rem;color:var(--gris);margin-top:18px}
+
+/* accès */
+.acces .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:60px;align-items:stretch}
+.map{border-radius:18px;overflow:hidden;min-height:440px;border:1px solid rgba(47,79,62,.2);position:relative;background:var(--creme-2)}
+.map iframe{width:100%;height:100%;border:0;position:absolute;inset:0;filter:sepia(.25) saturate(.85)}
+.info{list-style:none}
+.info li{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid rgba(47,79,62,.15)}
+.info .i{width:44px;height:44px;border-radius:50%;background:var(--vert);display:grid;place-items:center}
+.info small{display:block;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--or);font-weight:500}
+.info b{font-weight:400;font-size:1.02rem}
+.info a{text-decoration:none;border-bottom:1px solid rgba(200,161,90,.6)}
+
+
+/* instagram */
+.insta{padding:110px 0;background:var(--creme)}
+.insta .top{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:40px}
+.insta .head{margin-bottom:0}
+.ig{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.ig a{position:relative;display:block;border-radius:12px;overflow:hidden;aspect-ratio:4/5}
+.ig img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.ig a::after{content:"";position:absolute;inset:0;background:rgba(47,79,62,0);transition:.3s}
+.ig a:hover img{transform:scale(1.06)}
+.ig a:hover::after{background:rgba(47,79,62,.25)}
+@media (max-width:900px){.ig{grid-template-columns:repeat(3,1fr)}.insta{padding:80px 0}}
+@media (max-width:560px){.ig{grid-template-columns:repeat(2,1fr);gap:8px}}
+
+/* CTA */
+.final{position:relative;padding:140px 0;text-align:center;color:var(--creme);overflow:hidden}
+.final::before{content:"";position:absolute;inset:0;background:url(assets/img/salle.jpg) center/cover}
+.final::after{content:"";position:absolute;inset:0;background:rgba(20,33,26,.8)}
+.final .wrap{position:relative;z-index:1}
+.final h2{font-size:clamp(2.4rem,5vw,4.4rem);margin:16px 0 30px}
+.final .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+footer{background:var(--nuit);color:rgba(247,235,211,.7);padding:70px 0 120px;font-size:.88rem}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+footer img{height:110px;width:auto;margin-bottom:16px}
+footer h6{font:500 .74rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--or);margin-bottom:14px}
+footer ul{list-style:none}
+footer li{padding:4px 0}
+footer a{text-decoration:none}
+footer a:hover{color:var(--creme)}
+.bottom{grid-column:1/-1;border-top:1px solid rgba(247,235,211,.12);padding-top:24px;margin-top:20px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.76rem;opacity:.7}
+
+/* WhatsApp flottant */
+.wa{position:fixed;right:22px;bottom:22px;z-index:55;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;text-decoration:none;border-radius:999px;padding:14px 20px 14px 16px;font:500 .9rem var(--sans);box-shadow:0 12px 30px rgba(0,0,0,.25);transition:.25s}
+.wa:hover{transform:translateY(-3px)}
+.wa svg{flex:none}
+.mbar{display:none}
+
+.reveal{opacity:0;transform:translateY(30px);transition:1s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* responsive */
+@media (max-width:1080px){
+  .menu{gap:18px}.menu a{font-size:.8rem}
+  .moments-grid{grid-template-columns:1fr 1fr}
+  .moment{min-height:420px}
+  .moment p{max-height:200px}
+}
+@media (max-width:900px){
+  :root{--ban:26px}
+  .demo{font-size:.64rem}
+  section{padding:84px 0}
+  .burger{display:block}
+  .nav .btn-or{display:none}
+  .menu{position:fixed;top:calc(var(--ban) + 62px);left:0;right:0;flex-direction:column;gap:0;background:var(--nuit);padding:10px 5vw 30px;transform:translateY(-130%);transition:.4s;z-index:-1}
+  .open .menu{transform:none}
+  .menu a{display:block;padding:16px 0;font:400 1.6rem var(--serif);border-bottom:1px solid rgba(247,235,211,.1);opacity:1}
+  .menu a::after{display:none}
+  .nav{background:rgba(20,33,26,.94);padding:10px 0}
+  .brand img{height:38px}
+  .brand span{display:none}
+  .hero .wrap{grid-template-columns:1fr;padding:130px 0 14vh;gap:28px}
+  .hero::after{background:linear-gradient(180deg,rgba(20,33,26,.78) 0%,rgba(20,33,26,.7) 40%,rgba(20,33,26,.94) 100%)}
+  .hero-bg{filter:blur(2px)}
+  .hero-card{justify-self:stretch;max-width:none}
+  .intro .wrap,.carte .wrap,.resa .wrap,.acces .wrap,.feat,.panel.on{grid-template-columns:1fr}
+  .intro .wrap{gap:50px}
+  .intro .pics{height:440px}
+  .tabs{position:static;flex-direction:row;overflow-x:auto;gap:8px;margin:0 -5vw;padding:0 5vw 6px;scrollbar-width:none}
+  .tabs button{border:1px solid rgba(47,79,62,.2);border-radius:999px;font-size:1.05rem;padding:10px 18px;white-space:nowrap}
+  .tabs button small{display:none}
+  .panel img{aspect-ratio:16/10}
+  .feat .ph{min-height:300px}
+  .feat .tx{padding:32px 26px}
+  .feat h3{font-size:2.3rem}
+  .date-big b{font-size:3.6rem}
+  .ev{grid-template-columns:84px 1fr;gap:18px}
+  .ev .st{grid-column:2;justify-self:start}
+  .resa .side img{display:none}
+  form.card,.ok{padding:28px 22px;border-radius:18px}
+  .map{min-height:340px}
+  footer .wrap{grid-template-columns:1fr 1fr}
+  footer .wrap>div:first-child{grid-column:1/-1}
+  .wa{display:none}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(20,33,26,.96);backdrop-filter:blur(8px);border-top:1px solid rgba(200,161,90,.3)}
+  .mbar a{justify-content:center;padding:.9em .5em;font-size:.88rem}
+  .mbar .w{background:#25D366;color:#fff}
+}
+@media (max-width:560px){
+  .moments-grid{grid-template-columns:1fr}
+  .moment{min-height:340px}
+  .grid2{grid-template-columns:1fr;gap:0}
+  .hero h1{font-size:3.1rem}
+  .hero-card{display:none}
+  .intro .pics{height:360px}
+  .intro .sign{gap:24px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="demo" data-i18n="demo">Maquette proposée par Yelema, non publiée</div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#accueil" class="brand" aria-label="Le Comptoir, accueil"><img src="assets/img/logo_or_c.png" alt="Logo Le Comptoir"><span>LE COMPTOIR</span></a>
+    <ul class="menu" id="menu">
+      <li><a href="#moments" data-i18n="n1">Les moments</a></li>
+      <li><a href="#carte" data-i18n="n2">La carte</a></li>
+      <li><a href="#soirees" data-i18n="n3">Soirées</a></li>
+      <li><a href="#reserver" data-i18n="n4">Réserver</a></li>
+      <li><a href="#acces" data-i18n="n5">Accès & contact</a></li>
+    </ul>
+    <div class="nav-r">
+      <div class="lang" role="group" aria-label="Langue"><button data-l="fr" class="on">FR</button><button data-l="en">EN</button></div>
+      <a href="#reserver" class="btn btn-or" data-i18n="cta">Réserver une table</a>
+      <button class="burger" id="burger" aria-label="Menu"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="accueil" style="padding:0">
+  <div class="hero-bg" role="img" aria-label="Salle du restaurant le soir, suspensions en osier allumées"></div>
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" data-i18n="h_ey">Bar & restaurant · Ivoire Trade Center, Cocody</p>
+      <h1 data-i18n-html="h_t">Keep it fresh.<br><em>Keep it delicious.</em></h1>
+      <p class="lead" data-i18n="h_p">Du premier café au dernier verre, Le Comptoir accueille vos matins, vos déjeuners qui comptent et vos soirées qui s'étirent, sous la lumière douce des suspensions.</p>
+      <div class="cta">
+        <a href="#reserver" class="btn btn-or" data-i18n="cta">Réserver une table</a>
+        <a href="#carte" class="btn btn-line" data-i18n="h_b2">Découvrir la carte</a>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <h3 data-i18n="hc_t">On vous attend</h3>
+      <ul>
+        <li><span data-i18n="hc_1">Lundi au vendredi</span><b data-i18n="hc_1b">dès 7 h 30</b></li>
+        <li><span data-i18n="hc_2">Samedi et dimanche</span><b data-i18n="hc_2b">dès 8 h 30</b></li>
+        <li><span data-i18n="hc_3">Café, brunch, déjeuner</span><b data-i18n="hc_3b">dîner, soirées</b></li>
+      </ul>
+      <p class="now"><i class="dot"></i><span id="today"></span></p>
+    </aside>
+  </div>
+  <span class="scroll" aria-hidden="true"></span>
+</section>
+
+<section class="intro">
+  <div class="wrap">
+    <div class="pics reveal">
+      <img src="assets/img/salle.jpg" alt="Suspensions en osier au-dessus des tables" loading="lazy">
+      <img src="assets/img/cocktail.jpg" alt="Cocktail servi le soir" loading="lazy">
+    </div>
+    <div class="reveal">
+      <p class="eyebrow" data-i18n="i_ey">L'art de vivre, à Cocody</p>
+      <div class="head" style="margin-bottom:0">
+        <h2 data-i18n-html="i_t">Une adresse,<br>toute la journée.</h2>
+        <p data-i18n="i_p">Au rez-de-chaussée de l'Ivoire Trade Center, Le Comptoir est un bar-restaurant bistronomique : une cuisine soignée, un bar qui sait recevoir, et une salle cosy où le bois, l'osier et la lumière chaude font le reste.</p>
+      </div>
+      <blockquote data-i18n="i_q">« On vient pour un verre, on repart bien plus tard. »</blockquote>
+      <div class="sign">
+        <div><b data-i18n="i_s1">Matin</b><span data-i18n="i_s1b">café & petit-déjeuner</span></div>
+        <div><b data-i18n="i_s2">Midi</b><span data-i18n="i_s2b">déjeuners d'affaires</span></div>
+        <div><b data-i18n="i_s3">Soir</b><span data-i18n="i_s3b">dîner, bar & soirées</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="moments">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow" data-i18n="m_ey">Les moments du Comptoir</p>
+      <h2 data-i18n="m_t">À chaque heure, sa table.</h2>
+      <p data-i18n="m_p">Choisissez votre moment, on prépare le reste. Chaque carte vous mène directement à la réservation.</p>
+    </div>
+    <div class="moments-grid">
+      <a class="moment reveal" href="#reserver" data-moment="matin">
+        <img src="assets/img/matin.jpg" alt="Café latte" loading="lazy">
+        <div class="in"><span class="h" data-i18n="mo1h">Dès 7 h 30 · 8 h 30 le week-end</span><h3 data-i18n="mo1">Le matin</h3><p data-i18n="mo1p">Soft mornings. Strong coffee. Un café qui réveille, une table près de la lumière, un petit-déjeuner d'affaires qui commence bien.</p><span class="go" data-i18n="go">Réserver ce moment →</span></div>
+      </a>
+      <a class="moment reveal" href="#reserver" data-moment="brunch">
+        <img src="assets/img/brunch.jpg" alt="Table de brunch" loading="lazy">
+        <div class="in"><span class="h" data-i18n="mo2h">Samedi & dimanche</span><h3 data-i18n="mo2">Le brunch</h3><p data-i18n="mo2p">Sunday, slowly. Le week-end, on prend le temps : brunch, café, et personne pour regarder l'heure.</p><span class="go" data-i18n="go">Réserver ce moment →</span></div>
+      </a>
+      <a class="moment reveal" href="#reserver" data-moment="dejeuner">
+        <img src="assets/img/dejeuner.jpg" alt="Assiette du déjeuner" loading="lazy">
+        <div class="in"><span class="h" data-i18n="mo3h">Le midi</span><h3 data-i18n="mo3">Le déjeuner</h3><p data-i18n="mo3p">Une assiette de saison, un service attentif, et une heure qui en vaut deux. L'adresse des déjeuners qui comptent.</p><span class="go" data-i18n="go">Réserver ce moment →</span></div>
+      </a>
+      <a class="moment reveal" href="#reserver" data-moment="soir">
+        <img src="assets/img/bar.jpg" alt="Le bar le soir" loading="lazy">
+        <div class="in"><span class="h" data-i18n="mo4h">Golden hour & after</span><h3 data-i18n="mo4">Le soir</h3><p data-i18n="mo4p">Quand les suspensions s'allument, la salle change de voix. Dîner, afterwork, puis la nuit.</p><span class="go" data-i18n="go">Réserver ce moment →</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="carte" id="carte">
+  <div class="wrap">
+    <div>
+      <div class="head reveal" style="margin-bottom:34px">
+        <p class="eyebrow" data-i18n="c_ey">La carte</p>
+        <h2 data-i18n="c_t">Ce qui se passe en cuisine.</h2>
+      </div>
+      <div class="tabs" role="tablist">
+        <button class="on" data-p="p1"><span data-i18n="t1">Le matin</span><small data-i18n="t1s">café, petit-déjeuner</small></button>
+        <button data-p="p2"><span data-i18n="t2">Le brunch</span><small data-i18n="t2s">le week-end</small></button>
+        <button data-p="p3"><span data-i18n="t3">Midi & soir</span><small data-i18n="t3s">la cuisine bistronomique</small></button>
+        <button data-p="p4"><span data-i18n="t4">Desserts</span><small data-i18n="t4s">la règle d'or</small></button>
+        <button data-p="p5"><span data-i18n="t5">Le bar</span><small data-i18n="t5s">cocktails & vins</small></button>
+      </div>
+    </div>
+    <div>
+      <div class="panel on" id="p1"><img src="assets/img/cafe.jpg" alt="Café du matin" loading="lazy"><div><h3 data-i18n="t1">Le matin</h3><p class="tag" data-i18n="p1t">Soft mornings. Strong coffee.</p><ul class="cats">
+        <li><b data-i18n="p1a">Cafés & boissons chaudes</b><span data-i18n="p1as">Expresso, cafés longs, cafés au lait, thés et infusions.</span></li>
+        <li><b data-i18n="p1b">Petit-déjeuner</b><span data-i18n="p1bs">Viennoiseries, tartines, œufs, à la carte ou en formule.</span></li>
+        <li><b data-i18n="p1c">Jus & fraîcheur</b><span data-i18n="p1cs">Jus pressés et boissons fraîches du moment.</span></li>
+      </ul></div></div>
+      <div class="panel" id="p2"><img src="assets/img/brunch2.jpg" alt="Pancakes du brunch" loading="lazy"><div><h3 data-i18n="t2">Le brunch</h3><p class="tag" data-i18n="p2t">Sunday, slowly.</p><ul class="cats">
+        <li><b data-i18n="p2a">Le sucré</b><span data-i18n="p2as">Pancakes, gaufres, fruits frais.</span></li>
+        <li><b data-i18n="p2b">Le salé</b><span data-i18n="p2bs">Œufs à votre façon, assiettes à partager.</span></li>
+        <li><b data-i18n="p2c">À boire</b><span data-i18n="p2cs">Cafés, jus, et de quoi trinquer en douceur.</span></li>
+      </ul></div></div>
+      <div class="panel" id="p3"><img src="assets/img/diner.jpg" alt="Plat du dîner" loading="lazy"><div><h3 data-i18n="t3">Midi & soir</h3><p class="tag" data-i18n="p3t">Never rush dinner.</p><ul class="cats">
+        <li><b data-i18n="p3a">Entrées & à partager</b><span data-i18n="p3as">Pour ouvrir la table, ou pour accompagner un verre.</span></li>
+        <li><b data-i18n="p3b">Plats</b><span data-i18n="p3bs">Viandes, poissons et assiettes de saison.</span></li>
+        <li><b data-i18n="p3c">Suggestions du chef</b><span data-i18n="p3cs">Elles changent, demandez-les à votre arrivée.</span></li>
+      </ul></div></div>
+      <div class="panel" id="p4"><img src="assets/img/dessert.jpg" alt="Dessert à l'assiette" loading="lazy"><div><h3 data-i18n="t4">Desserts</h3><p class="tag" data-i18n="p4t">Leave room for dessert.</p><ul class="cats">
+        <li><b data-i18n="p4a">Les classiques</b><span data-i18n="p4as">Les desserts de bistrot, faits pour finir en beauté.</span></li>
+        <li><b data-i18n="p4b">Café gourmand</b><span data-i18n="p4bs">Quand on hésite, on prend un peu de tout.</span></li>
+      </ul></div></div>
+      <div class="panel" id="p5"><img src="assets/img/cocktail.jpg" alt="Cocktail au bar" loading="lazy"><div><h3 data-i18n="t5">Le bar</h3><p class="tag" data-i18n="p5t">Golden hour, à l'intérieur.</p><ul class="cats">
+        <li><b data-i18n="p5a">Cocktails signature</b><span data-i18n="p5as">Les créations du bar, et les grands classiques.</span></li>
+        <li><b data-i18n="p5b">Vins & champagnes</b><span data-i18n="p5bs">Au verre ou à la bouteille.</span></li>
+        <li><b data-i18n="p5c">Spiritueux & bières</b><span data-i18n="p5cs">Pour l'afterwork comme pour la nuit.</span></li>
+        <li><b data-i18n="p5d">Sans alcool</b><span data-i18n="p5ds">Mocktails, jus et softs.</span></li>
+      </ul></div></div>
+      <p class="note" data-i18n="c_note">La carte complète et les prix du jour sont disponibles à table, sur le menu digital (QR code).</p>
+    </div>
+  </div>
+</section>
+
+<section class="night soirees" id="soirees">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow" data-i18n="s_ey">Les soirées</p>
+      <h2 data-i18n="s_t">Après minuit, Le Comptoir change de voix.</h2>
+      <p data-i18n="s_p">Concerts, invités, after-shows : l'agenda des nuits du Comptoir. Les tables partent vite, réservez la vôtre.</p>
+    </div>
+    <article class="feat reveal">
+      <div class="ph"><span class="badge" data-i18n="s_next">Prochaine soirée</span></div>
+      <div class="tx">
+        <div class="date-big"><b>28</b><span data-i18n="s_m">novembre · samedi</span></div>
+        <h3>Velvet Night</h3>
+        <p data-i18n="s_fp">La nuit sera de velours : un live soul, un invité spécial dont on garde le nom pour nous encore un peu, et Le Comptoir comme on l'aime après minuit.</p>
+        <div class="meta">
+          <div><small data-i18n="s_h">Ouverture</small><span data-i18n="s_hv">dès 22 h</span></div>
+          <div><small data-i18n="s_e">Entrée</small><span data-i18n="s_ev">sur réservation</span></div>
+          <div><small data-i18n="s_l">Lieu</small><span>Le Comptoir, ITC</span></div>
+        </div>
+        <a href="#reserver" class="btn btn-or" data-moment="soiree" data-i18n="s_cta">Réserver ma table pour la soirée</a>
+      </div>
+    </article>
+    <ul class="agenda reveal">
+      <li><h4 data-i18n="s_past">Elles ont fait vibrer Le Comptoir</h4></li>
+      <li class="ev"><div class="d">30.10<small>2026</small></div><div><h5>Old School Experience · Oxmo Puccino</h5><p data-i18n="s_o">Ouverture des portes 23 h 30 · pass 20 000 FCFA, une boisson incluse.</p></div><span class="st" data-i18n="s_done">Passée</span></li>
+      <li class="ev"><div class="d">15.10<small>2026</small></div><div><h5>After-show · Tayc</h5><p data-i18n="s_t2">La soirée qui a prolongé le concert, au Comptoir.</p></div><span class="st" data-i18n="s_done">Passée</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="resa" id="reserver">
+  <div class="wrap">
+    <div class="side reveal">
+      <p class="eyebrow" data-i18n="r_ey">Réservation</p>
+      <div class="head" style="margin-bottom:0">
+        <h2 data-i18n-html="r_t">Réservé.<br>Pour vous.</h2>
+        <p data-i18n="r_p">Un anniversaire, un dîner à deux, un déjeuner d'équipe : dites-nous l'occasion, on s'occupe du reste.</p>
+      </div>
+      <ul class="why">
+        <li data-i18n="r_w1">Demande en moins d'une minute, sans compte à créer.</li>
+        <li data-i18n="r_w2">Confirmation par l'équipe sur WhatsApp ou par téléphone.</li>
+        <li data-i18n="r_w3">Une occasion à fêter ? On prépare la table en conséquence.</li>
+      </ul>
+      <img src="assets/img/salle2.jpg" alt="Salle du Comptoir" loading="lazy">
+    </div>
+
+    <div class="reveal">
+      <form class="card" id="form" novalidate>
+        <div class="steps"><i class="on"></i><i id="st2"></i><i id="st3"></i></div>
+        <fieldset class="f">
+          <legend data-i18n="f_mo">Votre moment</legend>
+          <div class="chips" id="moments-chips">
+            <label><input type="radio" name="moment" value="matin"><span data-i18n="mo1">Le matin</span></label>
+            <label><input type="radio" name="moment" value="brunch"><span data-i18n="mo2">Le brunch</span></label>
+            <label><input type="radio" name="moment" value="dejeuner" checked><span data-i18n="mo3">Le déjeuner</span></label>
+            <label><input type="radio" name="moment" value="soir"><span data-i18n="mo5">Le dîner</span></label>
+            <label><input type="radio" name="moment" value="soiree"><span data-i18n="mo6">Une soirée</span></label>
+          </div>
+        </fieldset>
+        <div class="grid2">
+          <div class="f" id="f-date"><label for="date" data-i18n="f_d">Date</label><input type="date" id="date" required><span class="err" id="e-date" data-i18n="e_d">Choisissez une date à venir.</span></div>
+          <div class="f" id="f-heure"><label for="heure" data-i18n="f_h">Heure</label><select id="heure" required></select><span class="err" data-i18n="e_h">Choisissez une heure.</span></div>
+        </div>
+        <div class="grid2">
+          <div class="f"><label for="couverts" data-i18n="f_c">Couverts</label>
+            <div class="stepper"><button type="button" id="moins" aria-label="Moins">−</button><input id="couverts" type="number" min="1" max="20" value="2" inputmode="numeric"><button type="button" id="plus" aria-label="Plus">+</button></div></div>
+          <div class="f"><label for="occasion" data-i18n="f_o">Occasion</label>
+            <select id="occasion">
+              <option value="aucune" data-i18n="o0">Aucune en particulier</option>
+              <option value="anniv" data-i18n="o1">Anniversaire</option>
+              <option value="deux" data-i18n="o2">Dîner à deux</option>
+              <option value="affaires" data-i18n="o3">Repas d'affaires</option>
+              <option value="equipe" data-i18n="o4">Déjeuner ou afterwork d'équipe</option>
+              <option value="fete" data-i18n="o5">Célébration</option>
+            </select></div>
+        </div>
+        <div class="grid2">
+          <div class="f" id="f-nom"><label for="nom" data-i18n="f_n">Nom</label><input id="nom" autocomplete="name" required><span class="err" data-i18n="e_n">Indiquez votre nom.</span></div>
+          <div class="f" id="f-tel"><label for="tel" data-i18n="f_t">Téléphone (WhatsApp)</label><div class="tel"><span>+225</span><input id="tel" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="07 00 00 00 00" required></div><span class="err" data-i18n="e_t">Un numéro à 10 chiffres, par exemple 07 00 00 00 00.</span></div>
+        </div>
+        <div class="f"><label for="msg" data-i18n="f_m">Une précision ? (facultatif)</label><textarea id="msg" rows="2" data-i18n-ph="f_mp" placeholder="Chaise bébé, gâteau à prévoir, table au calme…"></textarea></div>
+        <p class="legal" data-i18n="f_legal">Votre numéro sert uniquement à confirmer cette réservation.</p>
+        <button class="btn btn-vert" type="submit" data-i18n="f_go">Envoyer ma demande</button>
+      </form>
+
+      <div class="ok" id="ok" role="status" aria-live="polite">
+        <div class="ic"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#F7EBD3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3 data-i18n="ok_t">Votre demande est bien reçue</h3>
+        <p data-i18n="ok_p">L'équipe du Comptoir vous confirme la table sur WhatsApp ou par téléphone.</p>
+        <span class="ref" id="ref"></span>
+        <ul class="recap" id="recap"></ul>
+        <div class="act">
+          <a class="btn btn-vert" id="wa-send" target="_blank" rel="noopener" data-i18n="ok_wa">Envoyer aussi sur WhatsApp</a>
+          <button class="btn" style="border-color:rgba(47,79,62,.3)" id="again" data-i18n="ok_new">Nouvelle réservation</button>
+        </div>
+        <p class="small" data-i18n="ok_demo">Démonstration : la demande n'est transmise à personne tant que le site n'est pas relié au restaurant.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="acces" id="acces" style="background:var(--creme-2)">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow" data-i18n="a_ey">Accès & contact</p>
+      <div class="head" style="margin-bottom:20px"><h2 data-i18n="a_t">Au cœur de l'Ivoire Trade Center.</h2></div>
+      <ul class="info">
+        <li><span class="i"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z" fill="none" stroke="#C8A15A" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" fill="#C8A15A"/></svg></span><div><small data-i18n="a_1">Adresse</small><b>Ivoire Trade Center, boulevard Hassan II<br>Cocody, Abidjan</b><br><a href="https://www.google.com/maps/search/?api=1&query=Le%20Comptoir%20Ivoire%20Trade%20Center%20Cocody" target="_blank" rel="noopener" data-i18n="a_it">Itinéraire →</a></div></li>
+        <li><span class="i"><svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#C8A15A" stroke-width="1.6"/><path d="M12 7v5l3 2" fill="none" stroke="#C8A15A" stroke-width="1.6" stroke-linecap="round"/></svg></span><div><small data-i18n="a_2">Horaires</small><b data-i18n-html="a_2v">Du lundi au vendredi, dès 7 h 30<br>Samedi et dimanche, dès 8 h 30</b></div></li>
+        <li><span class="i"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.6-1.2A9 9 0 1012 3z" fill="none" stroke="#C8A15A" stroke-width="1.6"/></svg></span><div><small data-i18n="a_3">Réservations · WhatsApp</small><b><a href="https://wa.me/2250798974607" target="_blank" rel="noopener">+225 07 98 97 46 07</a></b></div></li>
+        <li><span class="i"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a1 1 0 01-1 1A16 16 0 014 5a1 1 0 011-1z" fill="none" stroke="#C8A15A" stroke-width="1.6"/></svg></span><div><small data-i18n="a_4">Téléphone</small><b><a href="tel:+2252724303890">+225 27 24 30 38 90</a></b></div></li>
+        <li><span class="i"><svg width="20" height="20" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="#C8A15A" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="#C8A15A" stroke-width="1.6"/><circle cx="17.3" cy="6.7" r="1" fill="#C8A15A"/></svg></span><div><small>Instagram</small><b><a href="https://www.instagram.com/lecomptoircocody/" target="_blank" rel="noopener">@lecomptoircocody</a></b></div></li>
+      </ul>
+    </div>
+    <div class="map reveal">
+      <iframe title="Plan d'accès : Ivoire Trade Center, Cocody" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-4.0085%2C5.3230%2C-3.9955%2C5.3310&amp;layer=mapnik&amp;marker=5.32694%2C-4.002"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="insta">
+  <div class="wrap">
+    <div class="top reveal">
+      <div class="head"><p class="eyebrow" data-i18n="ig_ey">@lecomptoircocody</p><h2 data-i18n="ig_t">La vie du Comptoir, en images.</h2></div>
+      <a class="btn btn-vert" href="https://www.instagram.com/lecomptoircocody/" target="_blank" rel="noopener" data-i18n="ig_b">Suivre sur Instagram</a>
+    </div>
+    <div class="ig reveal"><a href="https://www.instagram.com/lecomptoircocody/" target="_blank" rel="noopener"><img src="assets/img/ig1.jpg" alt="Publication Instagram du Comptoir" loading="lazy"></a><a href="https://www.instagram.com/lecomptoircocody/" target="_blank" rel="noopener"><img src="assets/img/ig2.jpg" alt="Publication Instagram du Comptoir" loading="lazy"></a><a href="https://www.instagram.com/lecomptoircocody/" target="_blank" rel="noopener"><img src="assets/img/ig3.jpg" alt="Publication Instagram du Comptoir" loading="lazy"></a><a href="https://www.instagram.com/lecomptoircocody/" target="_blank" rel="noopener"><img src="assets/img/ig4.jpg" alt="Publication Instagram du Comptoir" loading="lazy"></a><a href="https://www.instagram.com/lecomptoircocody/" target="_blank" rel="noopener"><img src="assets/img/ig5.jpg" alt="Publication Instagram du Comptoir" loading="lazy"></a><a href="https://www.instagram.com/lecomptoircocody/" target="_blank" rel="noopener"><img src="assets/img/ig6.jpg" alt="Publication Instagram du Comptoir" loading="lazy"></a></div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap reveal">
+    <p class="eyebrow" data-i18n="fi_ey">#LeComptoir · #ArtDeVivre</p>
+    <h2 data-i18n="fi_t">Votre table vous attend.</h2>
+    <div class="cta">
+      <a href="#reserver" class="btn btn-or" data-i18n="cta">Réserver une table</a>
+      <a href="https://wa.me/2250798974607?text=Bonjour%20Le%20Comptoir%2C%20je%20souhaite%20r%C3%A9server%20une%20table." class="btn btn-line" target="_blank" rel="noopener" data-i18n="fi_wa">Écrire sur WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><img src="assets/img/logo_creme.png" alt="Le Comptoir"><p data-i18n="ft_p">Bar & restaurant bistronomique · Ivoire Trade Center, Cocody, Abidjan.</p></div>
+    <div><h6 data-i18n="ft_1">Le site</h6><ul><li><a href="#moments" data-i18n="n1">Les moments</a></li><li><a href="#carte" data-i18n="n2">La carte</a></li><li><a href="#soirees" data-i18n="n3">Soirées</a></li><li><a href="#reserver" data-i18n="n4">Réserver</a></li></ul></div>
+    <div><h6 data-i18n="a_2">Horaires</h6><ul><li data-i18n="ft_h1">Lun.–ven. dès 7 h 30</li><li data-i18n="ft_h2">Sam.–dim. dès 8 h 30</li></ul></div>
+    <div><h6>Contact</h6><ul><li><a href="https://wa.me/2250798974607" target="_blank" rel="noopener">WhatsApp +225 07 98 97 46 07</a></li><li><a href="tel:+2252724303890">+225 27 24 30 38 90</a></li><li><a href="https://www.instagram.com/lecomptoircocody/" target="_blank" rel="noopener">@lecomptoircocody</a></li></ul></div>
+    <div class="bottom"><span>© Le Comptoir</span><span data-i18n="ft_cr">Photos d'illustration : Pexels (licence libre), à remplacer par les photos du lieu.</span></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/2250798974607?text=Bonjour%20Le%20Comptoir%2C%20je%20souhaite%20r%C3%A9server%20une%20table." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 32 32" fill="#fff"><path d="M16 3a13 13 0 00-11.2 19.6L3 29l6.6-1.7A13 13 0 1016 3zm0 23.7a10.7 10.7 0 01-5.5-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.7 10.7 0 1116 26.7zm5.9-8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.8 8.8 0 01-4.4-3.8c-.3-.6.3-.5.9-1.7a.6.6 0 000-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 00-.9.4 3.7 3.7 0 00-1.1 2.7 6.4 6.4 0 001.3 3.4 14.7 14.7 0 005.6 5c2.1.9 2.9 1 4 .8a3.3 3.3 0 002.2-1.5 2.7 2.7 0 00.2-1.5c-.1-.2-.3-.3-.7-.5z"/></svg>
+  <span data-i18n="wa">Réserver sur WhatsApp</span>
+</a>
+<nav class="mbar"><a href="#reserver" class="btn btn-or" data-i18n="cta">Réserver une table</a><a class="btn w" href="https://wa.me/2250798974607?text=Bonjour%20Le%20Comptoir%2C%20je%20souhaite%20r%C3%A9server%20une%20table." target="_blank" rel="noopener">WhatsApp</a></nav>
+
+<script>
+const T={
+fr:{},
+en:{demo:"Website mock-up proposed by Yelema, not published",n1:"Moments",n2:"Menu",n3:"Nights",n4:"Book",n5:"Access & contact",cta:"Book a table",
+h_ey:"Bar & restaurant · Ivoire Trade Center, Cocody",h_t:"Keep it fresh.<br><em>Keep it delicious.</em>",h_p:"From the first coffee to the last drink, Le Comptoir hosts your mornings, your lunches that matter and your long evenings, under the soft glow of the pendant lights.",h_b2:"See the menu",
+hc_t:"We're expecting you",hc_1:"Monday to Friday",hc_1b:"from 7:30 am",hc_2:"Saturday & Sunday",hc_2b:"from 8:30 am",hc_3:"Coffee, brunch, lunch",hc_3b:"dinner, nights",
+i_ey:"Art de vivre, in Cocody",i_t:"One address,<br>all day long.",i_p:"On the ground floor of the Ivoire Trade Center, Le Comptoir is a bistronomic bar and restaurant: thoughtful cooking, a bar that knows how to host, and a cosy room where wood, rattan and warm light do the rest.",i_q:"“Come for a drink, leave much later.”",i_s1:"Morning",i_s1b:"coffee & breakfast",i_s2:"Noon",i_s2b:"business lunches",i_s3:"Evening",i_s3b:"dinner, bar & nights",
+m_ey:"Moments at Le Comptoir",m_t:"Every hour has its table.",m_p:"Pick your moment, we'll take care of the rest. Each card takes you straight to booking.",
+mo1h:"From 7:30 am · 8:30 am on weekends",mo1:"Morning",mo1p:"Soft mornings. Strong coffee. A coffee that wakes you up, a table by the light, a business breakfast that starts well.",
+mo2h:"Saturday & Sunday",mo2:"Brunch",mo2p:"Sunday, slowly. At the weekend we take our time: brunch, coffee, and nobody watching the clock.",
+mo3h:"Midday",mo3:"Lunch",mo3p:"A seasonal plate, attentive service, and an hour that feels like two. The address for lunches that matter.",
+mo4h:"Golden hour & after",mo4:"Evening",mo4p:"When the pendant lights come on, the room changes its voice. Dinner, afterwork, then the night.",mo5:"Dinner",mo6:"A night event",go:"Book this moment →",
+c_ey:"The menu",c_t:"What's cooking.",t1:"Morning",t1s:"coffee, breakfast",t2:"Brunch",t2s:"at the weekend",t3:"Lunch & dinner",t3s:"bistronomic cooking",t4:"Desserts",t4s:"the golden rule",t5:"The bar",t5s:"cocktails & wine",
+p1t:"Soft mornings. Strong coffee.",p1a:"Coffee & hot drinks",p1as:"Espresso, long coffees, lattes, teas and infusions.",p1b:"Breakfast",p1bs:"Pastries, toasts, eggs, à la carte or as a set.",p1c:"Juices & fresh drinks",p1cs:"Freshly pressed juices and cool drinks of the moment.",
+p2t:"Sunday, slowly.",p2a:"Sweet",p2as:"Pancakes, waffles, fresh fruit.",p2b:"Savoury",p2bs:"Eggs your way, plates to share.",p2c:"To drink",p2cs:"Coffee, juices, and something to toast with, gently.",
+p3t:"Never rush dinner.",p3a:"Starters & sharing",p3as:"To open the table, or to go with a drink.",p3b:"Mains",p3bs:"Meat, fish and seasonal plates.",p3c:"Chef's suggestions",p3cs:"They change, ask for them when you arrive.",
+p4t:"Leave room for dessert.",p4a:"The classics",p4as:"Bistro desserts, made to end on a high note.",p4b:"Café gourmand",p4bs:"When you can't decide, have a little of everything.",
+p5t:"Golden hour, indoors.",p5a:"Signature cocktails",p5as:"The bar's creations, and the great classics.",p5b:"Wine & champagne",p5bs:"By the glass or by the bottle.",p5c:"Spirits & beers",p5cs:"For afterwork as well as for the night.",p5d:"Alcohol-free",p5ds:"Mocktails, juices and soft drinks.",
+c_note:"The full menu and today's prices are available at your table, on the digital menu (QR code).",
+s_ey:"Nights",s_t:"After midnight, Le Comptoir changes its voice.",s_p:"Concerts, guests, after-shows: the Le Comptoir nights calendar. Tables go fast, book yours.",s_next:"Next night",s_m:"November · Saturday",s_fp:"A velvet night: live soul, a special guest whose name we're keeping to ourselves a little longer, and Le Comptoir the way we love it after midnight.",s_h:"Doors",s_hv:"from 10 pm",s_e:"Entry",s_ev:"booking required",s_l:"Venue",s_cta:"Book my table for the night",s_past:"Nights that made Le Comptoir vibrate",s_o:"Doors 11:30 pm · pass 20,000 FCFA, one drink included.",s_t2:"The night that carried on after the concert, at Le Comptoir.",s_done:"Past",
+r_ey:"Booking",r_t:"Reserved.<br>For you.",r_p:"A birthday, a dinner for two, a team lunch: tell us the occasion, we'll take care of the rest.",r_w1:"Request in under a minute, no account needed.",r_w2:"Confirmation by the team on WhatsApp or by phone.",r_w3:"Something to celebrate? We'll set the table accordingly.",
+f_mo:"Your moment",f_d:"Date",f_h:"Time",f_c:"Guests",f_o:"Occasion",o0:"Nothing in particular",o1:"Birthday",o2:"Dinner for two",o3:"Business meal",o4:"Team lunch or afterwork",o5:"Celebration",f_n:"Name",f_t:"Phone (WhatsApp)",f_m:"Anything to add? (optional)",f_mp:"High chair, cake to plan, quiet table…",f_legal:"Your number is only used to confirm this booking.",f_go:"Send my request",
+e_d:"Choose an upcoming date.",e_h:"Choose a time.",e_n:"Enter your name.",e_t:"A 10-digit number, e.g. 07 00 00 00 00.",e_brunch:"Brunch is served on Saturdays and Sundays.",
+ok_t:"Your request has been received",ok_p:"The Le Comptoir team will confirm your table on WhatsApp or by phone.",ok_wa:"Also send on WhatsApp",ok_new:"New booking",ok_demo:"Demo: the request is not sent to anyone until the website is connected to the restaurant.",
+a_ey:"Access & contact",a_t:"In the heart of the Ivoire Trade Center.",a_1:"Address",a_it:"Directions →",a_2:"Opening hours",a_2v:"Monday to Friday, from 7:30 am<br>Saturday and Sunday, from 8:30 am",a_3:"Bookings · WhatsApp",a_4:"Phone",
+ig_t:"Life at Le Comptoir, in pictures.",ig_b:"Follow on Instagram",fi_ey:"#LeComptoir · #ArtDeVivre",fi_t:"Your table is waiting.",fi_wa:"Message us on WhatsApp",
+ft_p:"Bistronomic bar & restaurant · Ivoire Trade Center, Cocody, Abidjan.",ft_1:"The site",ft_h1:"Mon–Fri from 7:30 am",ft_h2:"Sat–Sun from 8:30 am",ft_cr:"Illustrative photos: Pexels (free licence), to be replaced with photos of the venue.",wa:"Book on WhatsApp"}
+};
+const FRX={e_brunch:"Le brunch est servi le samedi et le dimanche."};
+let L='fr';
+document.querySelectorAll('[data-i18n]').forEach(e=>T.fr[e.dataset.i18n]=e.textContent);
+document.querySelectorAll('[data-i18n-html]').forEach(e=>T.fr[e.dataset.i18nHtml]=e.innerHTML);
+document.querySelectorAll('[data-i18n-ph]').forEach(e=>T.fr[e.dataset.i18nPh]=e.placeholder);
+Object.assign(T.fr,FRX);
+const t=k=>T[L][k]??T.fr[k]??k;
+function setLang(l){L=l;document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(e=>e.textContent=t(e.dataset.i18n));
+  document.querySelectorAll('[data-i18n-html]').forEach(e=>e.innerHTML=t(e.dataset.i18nHtml));
+  document.querySelectorAll('[data-i18n-ph]').forEach(e=>e.placeholder=t(e.dataset.i18nPh));
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));
+  try{localStorage.setItem('lc-lang',l)}catch(e){}
+  fillHours();today();if(document.getElementById('ok').classList.contains('on'))showOk(last);
+}
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+
+// nav
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>60),{passive:true});
+document.getElementById('burger').onclick=()=>nav.classList.toggle('open');
+document.querySelectorAll('.menu a').forEach(a=>a.onclick=()=>nav.classList.remove('open'));
+
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+
+// onglets carte
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===b.dataset.p));});
+
+// jour courant
+function today(){const d=new Date(),wk=d.getDay()===0||d.getDay()===6;
+  const days=L==='fr'?['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi']:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const day=days[d.getDay()];
+  document.getElementById('today').textContent=L==='fr'?`Aujourd'hui, ${day} : ouvert dès ${wk?'8 h 30':'7 h 30'}`:`Today, ${day}: open from ${wk?'8:30 am':'7:30 am'}`;}
+
+// formulaire
+const $=id=>document.getElementById(id);
+const dateI=$('date'),heure=$('heure'),cv=$('couverts');
+const pad=n=>String(n).padStart(2,'0');
+const iso=d=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+const now=new Date();dateI.min=iso(now);dateI.value=iso(now);
+const RANGES={matin:[[7,30],[11,0]],brunch:[[8,30],[15,0]],dejeuner:[[12,0],[15,0]],soir:[[19,0],[23,0]],soiree:[[22,0],[23,30]]};
+function moment(){return document.querySelector('input[name=moment]:checked').value}
+function fmt(h,m){return L==='fr'?`${h} h ${pad(m)}`.replace(' h 00',' h'):`${pad(h)}:${pad(m)}`}
+function fillHours(){const mo=moment(),d=dateI.value?new Date(dateI.value+'T00:00'):now,wk=d.getDay()===0||d.getDay()===6;
+  let [a,b]=RANGES[mo];if(mo==='matin'&&wk)a=[8,30];
+  const prev=heure.value;heure.innerHTML='';
+  const isToday=dateI.value===iso(new Date());const cur=new Date();
+  for(let m=a[0]*60+a[1];m<=b[0]*60+b[1];m+=30){const h=Math.floor(m/60),mi=m%60;
+    if(isToday&&(h*60+mi)<=cur.getHours()*60+cur.getMinutes()+30)continue;
+    const o=document.createElement('option');o.value=`${pad(h)}:${pad(mi)}`;o.textContent=fmt(h,mi);heure.appendChild(o);}
+  if(!heure.options.length){const o=document.createElement('option');o.value='';o.textContent=L==='fr'?'Plus de créneau ce jour-là':'No more slots that day';heure.appendChild(o);}
+  if([...heure.options].some(o=>o.value===prev))heure.value=prev;
+}
+document.querySelectorAll('input[name=moment]').forEach(r=>r.onchange=()=>{fillHours();$('st2').classList.add('on')});
+dateI.onchange=()=>{fillHours();$('st2').classList.add('on')};
+$('moins').onclick=()=>cv.value=Math.max(1,+cv.value-1);
+$('plus').onclick=()=>cv.value=Math.min(20,+cv.value+1);
+document.querySelectorAll('[data-moment]').forEach(a=>a.addEventListener('click',()=>{const r=document.querySelector(`input[name=moment][value=${a.dataset.moment}]`);if(r){r.checked=true;fillHours();}}));
+fillHours();today();
+
+let last=null;
+function bad(id,on,msgKey){$(id).classList.toggle('bad',on);if(on&&msgKey){$(id).querySelector('.err').textContent=t(msgKey)}return on}
+$('form').addEventListener('input',e=>{$('st3').classList.add('on');const f=e.target.closest('.f');if(f)f.classList.remove('bad')});
+$('form').onsubmit=e=>{e.preventDefault();
+  const tel=$('tel').value.replace(/\D/g,'');const mo=moment();
+  const d=dateI.value?new Date(dateI.value+'T00:00'):null;const wk=d&&(d.getDay()===0||d.getDay()===6);
+  let ko=false;
+  ko|=bad('f-date',!d||dateI.value<iso(new Date())||(mo==='brunch'&&!wk),(mo==='brunch'&&d&&!wk)?'e_brunch':'e_d');
+  ko|=bad('f-heure',!heure.value);
+  ko|=bad('f-nom',$('nom').value.trim().length<2);
+  ko|=bad('f-tel',tel.length!==10);
+  if(ko){document.querySelector('.f.bad')?.scrollIntoView({behavior:'smooth',block:'center'});return}
+  last={mo,date:dateI.value,heure:heure.value,cv:+cv.value,occ:$('occasion').value,nom:$('nom').value.trim(),tel:tel.replace(/(\d{2})(?=\d)/g,'$1 '),msg:$('msg').value.trim(),ref:'LC-'+Math.random().toString(36).slice(2,7).toUpperCase()};
+  try{const all=JSON.parse(localStorage.getItem('lc-resa')||'[]');all.push(last);localStorage.setItem('lc-resa',JSON.stringify(all))}catch(e){}
+  showOk(last);
+};
+const MO={matin:'mo1',brunch:'mo2',dejeuner:'mo3',soir:'mo5',soiree:'mo6'};
+function showOk(r){if(!r)return;
+  const d=new Date(r.date+'T00:00').toLocaleDateString(L==='fr'?'fr-FR':'en-GB',{weekday:'long',day:'numeric',month:'long'});
+  const [h,m]=r.heure.split(':').map(Number);const occ=document.querySelector(`#occasion option[value=${r.occ}]`);
+  const rows=[[t('f_mo'),t(MO[r.mo])],[t('f_d'),d],[t('f_h'),fmt(h,m)],[t('f_c'),r.cv],[t('f_o'),t(occ.dataset.i18n)],[t('f_n'),r.nom],[t('f_t'),'+225 '+r.tel]];
+  $('recap').innerHTML=rows.map(([a,b])=>`<li><span>${a}</span><b>${String(b).replace(/</g,'&lt;')}</b></li>`).join('');
+  $('ref').textContent=(L==='fr'?'Référence ':'Reference ')+r.ref;
+  const txt=(L==='fr'?`Bonjour Le Comptoir, je souhaite réserver une table.\n`:`Hello Le Comptoir, I would like to book a table.\n`)+rows.map(([a,b])=>`${a} : ${b}`).join('\n')+(r.msg?`\n${r.msg}`:'')+`\n(${r.ref})`;
+  $('wa-send').href='https://wa.me/2250798974607?text='+encodeURIComponent(txt);
+  $('form').style.display='none';$('ok').classList.add('on');
+  $('reserver').scrollIntoView({behavior:'smooth'});
+}
+$('again').onclick=()=>{$('ok').classList.remove('on');$('form').style.display='';$('form').reset();cv.value=2;dateI.value=iso(new Date());fillHours();};
+
+try{const s=localStorage.getItem('lc-lang');if(s==='en')setLang('en')}catch(e){}
+if(new URLSearchParams(location.search).get('lang')==='en')setLang('en');
+</script>
+</body>
+</html>
